@@ -1,10 +1,8 @@
-import type { NextPage } from 'next'
-import HelloWorld from '../components/HelloWorld'
+import Hello from "../components/Hello";
 
-const Home: NextPage = () => {
-  return (
-    <HelloWorld />
+export default function Home() {
+  return(
+    
+    <Hello />
   )
 }
-
-export default Home
