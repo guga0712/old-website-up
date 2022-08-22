@@ -1,8 +1,9 @@
 import type { NextPage } from 'next'
+import HelloWorld from '../components/HelloWorld'
 
 const Home: NextPage = () => {
   return (
-   <h1>Hello World</h1>
+    <HelloWorld />
   )
 }
 
