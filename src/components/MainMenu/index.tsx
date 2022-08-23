@@ -17,14 +17,13 @@ import {
     Stack,
     Text
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { HamburgerIcon, CloseIcon, ArrowForwardIcon, ArrowRightIcon, ChevronRightIcon } from '@chakra-ui/icons';
 
 const Links = ['Página Inicial', 'Serviços', 'Clientes', 'Contato'];
 
 const NavLink = ({ children }: { children: ReactNode }) => (
     <Link
-        px={2}
-        py={8}
+        py={6}
         _hover={{ textDecoration: 'none' }}
         _active={{
             color: '#00DEB6',
@@ -33,7 +32,7 @@ const NavLink = ({ children }: { children: ReactNode }) => (
         textDecoration='none'
         href={'#'}
         fontWeight={{ base: '600', md: '400' }}
-        fontSize={{ sm: '25px', md: 'md' }}
+        fontSize={{ base: '25px', md: 'md' }}
         color="#4E4E4E"
     >
         {children}
@@ -46,15 +45,8 @@ export default function MainMenu() {
 
     return (
         <>
-            <Box bg='white' px={{ base: '4', md: '8' }}>
+            <Box bg='white' px={{ base: '4', md: '8' }} borderBottom='1px solid gray'>
                 <Flex h={16} alignItems={'center'} justifyContent={{ base: 'space-between' }}>
-                    <IconButton
-                        size={'md'}
-                        icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-                        aria-label={'Open Menu'}
-                        display={{ md: 'none' }}
-                        onClick={isOpen ? onClose : onOpen}
-                    />
                     <HStack spacing={{ lg: '14', md: '4' }} alignItems={'center'}>
                         <Box>Logo</Box>
                         <HStack
@@ -66,6 +58,13 @@ export default function MainMenu() {
                             ))}
                         </HStack>
                     </HStack>
+                    <IconButton
+                        size={'md'}
+                        icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                        aria-label={'Open Menu'}
+                        display={{ md: 'none' }}
+                        onClick={isOpen ? onClose : onOpen}
+                    />
                     <Link
                         display={{ base: 'none', md: 'flex' }}
                         px='4'
@@ -78,10 +77,15 @@ export default function MainMenu() {
                         Solicite um orçamento</Link>
                 </Flex>
                 {isOpen ? (
-                    <Box pb={4} h="100vh" display={{ md: 'none' }}>
+                    <Box pb={4} px="0" h="100vh" display={{ md: 'none' }}>
                         <Stack as={'nav'} spacing={4}>
                             {Links.map((link) => (
-                                <NavLink key={link}>{link}</NavLink>
+                                <NavLink key={link}>
+                                    <Flex justifyContent="space-between" alignItems="center">
+                                        {link}
+                                        <ChevronRightIcon fontSize="40px" />
+                                    </Flex>
+                                </NavLink>
                             ))}
                         </Stack>
                     </Box>
