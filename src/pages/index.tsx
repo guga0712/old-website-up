@@ -1,8 +1,14 @@
-import Hello from "../components/Hello";
+import BannerHome from "../components/BannerHome";
+import Investimento from "../components/Investimento";
+import WeGoHigh from "../components/WeGoHigh";
 
 export default function Home() {
-  return(
-    
-    <Hello />
+  return (
+
+    <>
+      <BannerHome />
+      <WeGoHigh />
+      <Investimento />
+    </>
   )
 }

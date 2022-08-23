@@ -1,6 +1,6 @@
 {
     "editor.formatOnSave": true,
     "editor.cursorSmoothCaretAnimation": true,
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
     "editor.cursorBlinking": "smooth"
 }
