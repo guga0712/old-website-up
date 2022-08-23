@@ -24,33 +24,30 @@ const Links = ['Página Inicial', 'Serviços', 'Clientes', 'Contato'];
 const NavLink = ({ children }: { children: ReactNode }) => (
     <Link
         px={2}
-        py={1}
-        rounded={'md'}
-        _hover={{
-            textDecoration: 'none',
-            bg: useColorModeValue('gray.200', 'gray.700'),
+        py={8}
+        _hover={{ textDecoration: 'none' }}
+        _active={{
+            color: '#00DEB6',
+            textDecoration: 'none'
         }}
-        href={'#'}>
+        textDecoration='none'
+        href={'#'}
+        fontWeight={{ base: '600', md: '400' }}
+        fontSize={{ sm: '25px', md: 'md' }}
+        color="#4E4E4E"
+    >
         {children}
-    </Link>
+    </Link >
 );
 
 export default function MainMenu() {
-
-    const breakpoints = {
-        sm: '30em',
-        md: '48em',
-        lg: '62em',
-        xl: '80em',
-        '2xl': '96em',
-    }
 
     const { isOpen, onOpen, onClose } = useDisclosure();
 
     return (
         <>
-            <Box bg='gray.100' px={4}>
-                <Flex h={16} alignItems={'center'} justifyContent={{ base: 'space-between', md: 'space-between' }}>
+            <Box bg='white' px={{ base: '4', md: '8' }}>
+                <Flex h={16} alignItems={'center'} justifyContent={{ base: 'space-between' }}>
                     <IconButton
                         size={'md'}
                         icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -58,22 +55,30 @@ export default function MainMenu() {
                         display={{ md: 'none' }}
                         onClick={isOpen ? onClose : onOpen}
                     />
-                    <HStack spacing={8} alignItems={'center'}>
+                    <HStack spacing={{ lg: '14', md: '4' }} alignItems={'center'}>
                         <Box>Logo</Box>
                         <HStack
                             as={'nav'}
-                            spacing={4}
+                            spacing={{ lg: '14', md: '4' }}
                             display={{ base: 'none', md: 'flex' }}>
                             {Links.map((link) => (
                                 <NavLink key={link}>{link}</NavLink>
                             ))}
                         </HStack>
                     </HStack>
-                    <Link display={{ base: 'none', md: 'flex' }}>Solicite um orçamento</Link>
+                    <Link
+                        display={{ base: 'none', md: 'flex' }}
+                        px='4'
+                        py='2'
+                        bg='#00DEB6'
+                        borderRadius={10}
+                        color='white'
+                        fontWeight='600'
+                    >
+                        Solicite um orçamento</Link>
                 </Flex>
-
                 {isOpen ? (
-                    <Box pb={4} display={{ md: 'none' }}>
+                    <Box pb={4} h="100vh" display={{ md: 'none' }}>
                         <Stack as={'nav'} spacing={4}>
                             {Links.map((link) => (
                                 <NavLink key={link}>{link}</NavLink>

@@ -1,4 +1,3 @@
-import Hello from "../components/Hello";
 import MainMenu from "../components/MainMenu";
 
 export default function Home() {
