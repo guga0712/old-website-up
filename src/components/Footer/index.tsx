@@ -10,6 +10,7 @@ import {
     Flex,
     useColorModeValue,
 } from '@chakra-ui/react';
+import LinkFooter from './LinkFooter';
 
 const ListHeader = ({ children }: { children: ReactNode }) => {
     return (
@@ -18,6 +19,7 @@ const ListHeader = ({ children }: { children: ReactNode }) => {
         </Text>
     );
 };
+
 
 export default function Footer() {
     return (
@@ -32,6 +34,13 @@ export default function Footer() {
                     gap={{ base: '10', md: '0' }}
                 >
                     <Stack align={'flex-start'}>
+                        <ListHeader>Menu</ListHeader>
+                        <LinkFooter href='#' page='Página inicial' />
+                        <LinkFooter href='#' page='Serviços' />
+                        <LinkFooter href='#' page='Clientes' />
+                        <LinkFooter href='#' page='Contato' />
+                    </Stack>
+                    <Stack align={'flex-start'}>
                         <ListHeader>Contato</ListHeader>
                         <Link href={'#'}>Overview</Link>
                         <Link href={'#'}>Features</Link>
@@ -41,25 +50,20 @@ export default function Footer() {
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Serviços</ListHeader>
-                        <Text>Marketing</Text>
-                        <Text>Suporte</Text>
-                        <Text>Design</Text>
-                    </Stack>
-                    <Stack align={'flex-start'}>
-                        <ListHeader>Menu</ListHeader>
-                        <Link href={'#'}>Página inicial</Link>
-                        <Link href={'#'}>Serviços</Link>
-                        <Link href={'#'}>Clientes</Link>
-                        <Link href={'#'}>Contato</Link>
+                        <LinkFooter href='services' page='Marketing' />
+                        <LinkFooter href='#' page='Suporte' />
+                        <LinkFooter href='#' page='Design' />
                     </Stack>
                     <Stack align={'flex-start'}>
                         <ListHeader>Redes Sociais</ListHeader>
-                        <Link href={'#'}>Facebook</Link>
-                        <Link href={'#'}>Instagram</Link>
-                        <Link href={'#'}>LinkedIn</Link>
+                        <LinkFooter href='#' page='Facebook' />
+                        <LinkFooter href='#' page='Instagram' />
+                        <LinkFooter href='#' page='Linkedin' />
+                        <LinkFooter href='#' page='WhatsApp' />
                     </Stack>
                 </Flex>
             </Container>
+            <Text textAlign='center' paddingBottom={8}> © 2022 Up Agency Brasil. Todos os direitos reservados. </Text>
         </Box>
     );
 }

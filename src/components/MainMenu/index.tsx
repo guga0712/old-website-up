@@ -77,7 +77,7 @@ export default function MainMenu() {
                         Solicite um orçamento</Link>
                 </Flex>
                 {isOpen ? (
-                    <Box pb={4} px="0" h="100vh" display={{ md: 'none' }}>
+                    <Box pb={4} px="0" h="100vh" display={{ md: 'none' }} >
                         <Stack as={'nav'} spacing={4}>
                             {Links.map((link) => (
                                 <NavLink key={link}>
