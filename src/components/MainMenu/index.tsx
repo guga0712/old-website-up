@@ -45,7 +45,7 @@ export default function MainMenu() {
 
     return (
         <>
-            <Box bg='white' px={{ base: '4', md: '8' }} borderBottom='1px solid gray'>
+            <Box bg='white' px={{ base: '4', md: '8' }}>
                 <Flex h={16} alignItems={'center'} justifyContent={{ base: 'space-between' }}>
                     <HStack spacing={{ lg: '14', md: '4' }} alignItems={'center'}>
                         <Box>Logo</Box>
