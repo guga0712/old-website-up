@@ -8,11 +8,12 @@ export default function BannerHome() {
         <>
             {/* desktop */}
             <Flex display={{ base: "none", sm: "none", md: "block", lg: "block" }} alignItems="center" >
-                <Image src={desktop} />
+                <Image src={desktop} fallbackSrc='https://via.placeholder.com/150' />
             </Flex>
             {/* Mobile */}
             <Flex display={{ base: "block", sm: "block", md: "none", lg: "none" }} alignItems="center" >
                 <Image src={capaMobile} />
+
             </Flex >
             {/* desktop */}
             <Flex border="1px solid red" marginTop="300px" display={{ base: "none", sm: "none", md: "block", lg: "block" }} direction="column" justifyContent="center" marginLeft="300px" w="700px" >
