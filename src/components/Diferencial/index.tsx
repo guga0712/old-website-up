@@ -13,4 +13,4 @@ export default function Diferencial() {
             <ColaboraMobi />
         </>
     )
-}
+} 0
