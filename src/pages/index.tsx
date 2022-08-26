@@ -1,6 +1,7 @@
 import AboutDesk from "../components/AboutUs/AboutDesk";
 import AboutUs from "../components/AboutUs/AboutDesk";
 import AboutMobi from "../components/AboutUs/AboutMobi";
+import AllWeDo from "../components/AllWeDo/AllWeDo";
 import BannerDesk from "../components/BannerHome/bannerDesk";
 import BannerHome from "../components/BannerHome/bannerDesk";
 import BannerMobi from "../components/BannerHome/bannerMObi";
@@ -15,7 +16,7 @@ import WeGoHigh from "../components/WeGoHigh";
 export default function Home() {
   return (
     <>
-      <BannerDesk />
+      {/* <BannerDesk />
       <BannerMobi />
       <WeGoHigh />
       <Investimento />
@@ -23,11 +24,8 @@ export default function Home() {
       <AboutMobi />
       <VisaoDesk />
       <VisaoMobi />
-      <Diferencial />
-
-
-
-
+      <Diferencial /> */}
+      <AllWeDo />
     </>
   )
 }
