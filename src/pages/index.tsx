@@ -9,6 +9,8 @@ import Diferencial from "../components/Diferencial";
 import Footer from "../components/Footer";
 import Investimento from "../components/Investimento";
 import MainMenu from "../components/MainMenu";
+import ServicoDescri from "../components/Servicos/servicoDescri";
+import ServicosMobi from "../components/Servicos/ServicosMobi";
 import VisaoDesk from "../components/Visao/VisaoDesk";
 import VisaoMobi from "../components/Visao/VisaoMobi";
 import WeGoHigh from "../components/WeGoHigh";
@@ -16,6 +18,7 @@ import WeGoHigh from "../components/WeGoHigh";
 export default function Home() {
   return (
     <>
+      {/* HOME */}
       {/* <BannerDesk />
       <BannerMobi />
       <WeGoHigh />
@@ -25,7 +28,11 @@ export default function Home() {
       <VisaoDesk />
       <VisaoMobi />
       <Diferencial /> */}
+
+      {/* SERVIÇOS */}
+      <ServicosMobi />
       <AllWeDo />
+      <ServicoDescri />
     </>
   )
 }

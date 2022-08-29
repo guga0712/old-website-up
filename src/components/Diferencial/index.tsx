@@ -1,8 +1,8 @@
-import { Flex, Link, Text } from "@chakra-ui/react";
-import { FaHandsHelping } from 'react-icons/fa';
-import { TbStairsUp } from 'react-icons/tb';
+
 import Colabora from "./diferencialDesk";
 import ColaboraMobi from "./diferencialMobi";
+import NossoTimeDesk from "./nossoTimeDesk";
+import NossoTimeMobi from "./NossoTimeMobi";
 
 
 export default function Diferencial() {
@@ -11,6 +11,8 @@ export default function Diferencial() {
         <>
             <Colabora />
             <ColaboraMobi />
+            <NossoTimeMobi />
+            <NossoTimeDesk />
         </>
     )
-} 0
+} 

@@ -10,7 +10,7 @@ import React from 'react';
 export default function ColaboraMobi() {
     return (
 
-        <Flex borderTopRadius="10px" display={{ base: "block", sm: "block", md: "none", lg: "none" }} direction="column" gap="20px" alignItems="center" w="100%" h="400px" border="1px solid red" bg="black">
+        <Flex borderTopRadius="10px" display={{ base: "block", sm: "block", md: "none", lg: "none" }} direction="column" gap="20px" alignItems="center" w="100%" h="300px" bg="black">
             <Text marginBottom="15px" fontFamily="Raleway" fontSize="24px" textAlign="center" marginTop="20px" fontWeight="bold" color="white">Diferencial</Text>
             <Carousel >
                 <Flex marginLeft="25px" gap="20px" direction="row">
