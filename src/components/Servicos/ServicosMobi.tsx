@@ -18,7 +18,7 @@ export default function ServicosMobi() {
                 <Text fontSize="24px" textAlign="center" fontWeight="bold">Nossos  Serviços</Text>
                 <Text lineHeight="25px" textAlign="center" fontSize="12px">A UP é uma agência digital especializada no nicho de<br></br> moda feminina e acessórios. Trabalhamos como<br></br> colaboradores da sua marca, buscando de maneira<br></br> estratégica e efetiva alavancar seus resultados.</Text>
             </Flex>
-            <Flex direction="column" h="600px">
+            <Flex display={{ base: "flex", sm: "flex", md: "none", lg: "none" }} direction="column" h="600px">
                 <Text fontSize="16px" textAlign="center" fontWeight="bold">Métodoligia</Text>
                 <Text fontSize="10px" color="#828282" textAlign="center">Entenda um pouco do<br></br> nosso método 360</Text>
             </Flex>

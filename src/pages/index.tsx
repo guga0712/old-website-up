@@ -7,6 +7,7 @@ import BannerHome from "../components/BannerHome/bannerDesk";
 import BannerMobi from "../components/BannerHome/bannerMObi";
 import Diferencial from "../components/Diferencial";
 import Footer from "../components/Footer";
+import Formulario from "../components/Formulario";
 import Investimento from "../components/Investimento";
 import MainMenu from "../components/MainMenu";
 import ServicoDescri from "../components/Servicos/servicoDescri";
@@ -19,7 +20,7 @@ export default function Home() {
   return (
     <>
       {/* HOME */}
-      {/* <BannerDesk />
+      <BannerDesk />
       <BannerMobi />
       <WeGoHigh />
       <Investimento />
@@ -27,12 +28,13 @@ export default function Home() {
       <AboutMobi />
       <VisaoDesk />
       <VisaoMobi />
-      <Diferencial /> */}
+      <Diferencial />
 
       {/* SERVIÇOS */}
       <ServicosMobi />
       <AllWeDo />
       <ServicoDescri />
+      <Formulario />
     </>
   )
 }
